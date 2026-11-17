@@ -1,0 +1,14 @@
+# Optional: a local MongoDB for development.   docker compose up -d
+# Both apps then connect with  mongodb://127.0.0.1:27017/vroomly
+services:
+  mongo:
+    image: mongo:7
+    container_name: vroomly-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - vroomly-mongo-data:/data/db
+
+volumes:
+  vroomly-mongo-data:
