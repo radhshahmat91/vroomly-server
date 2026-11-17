@@ -1,0 +1,32 @@
+# Render blueprint for the API.  Dashboard → New → Blueprint, pick this repo.
+services:
+  - type: web
+    name: vroomly-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false            # your MongoDB Atlas connection string (include the database name)
+      - key: MONGODB_DB
+        value: vroomly
+      - key: CLIENT_URL
+        sync: false            # https://your-app.vercel.app  (comma separate extra origins)
+      - key: AUTH_URL
+        sync: false            # the SAME https://your-app.vercel.app where BetterAuth runs
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
+      - key: PLATFORM_COMMISSION
+        value: "0.10"
