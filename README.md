@@ -2,8 +2,8 @@
 
 REST API for the Vroomly car rental marketplace: Express 5, MongoDB (Mongoose), Socket.IO, Stripe and Cloudinary.
 
-**Live API:** https://vroomly-api.onrender.com  ← replace with your deployed URL
-**Client repo:** [radhshahmat91/vroomly-client](https://github.com/radhshahmat91/vroomly-client) — the Next.js app
+**Live API:** https://vroomly-server.onrender.com
+**Client repo:** https://github.com/radhshahmat91/vroomly-client
 
 ## Highlights
 
