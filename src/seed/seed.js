@@ -8,6 +8,9 @@
  * Only users whose email ends with @vroomly.app are touched; real accounts are left alone.
  * Marketplace collections (cars, bookings, reviews, payments, notifications, complaints) are emptied.
  */
+import dns from "node:dns";
+dns.setServers(["1.1.1.1", "8.8.8.8"]);
+
 import crypto from 'node:crypto';
 import mongoose from 'mongoose';
 import { connectDB, disconnectDB } from '../config/db.js';
